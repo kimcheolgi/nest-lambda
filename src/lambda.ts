@@ -11,6 +11,8 @@ async function bootstrap(): Promise<Handler> {
   const config = new DocumentBuilder()
     .setTitle('Users API')
     .setDescription('The is a sample REST API')
+    .setVersion('1.0')
+    .addServer('/dev')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
